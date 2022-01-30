@@ -45,8 +45,10 @@
                 window.addEventListener('load', l, false);
             }
         })();
-        ChannelIO('boot', {
+        ChannelIO("boot", {
             "pluginKey": "13f6904b-4682-444d-a9db-3df8aee19af5"
+        }, function onBoot(err, user) {
+            ChannelIO("show");
         });
     </script>
     <!-- End Channel Plugin -->
