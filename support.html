@@ -4,10 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
     <title>Pickple - 문의하기</title>
 </head>
 
 <body>
+    <script>
+        let css = `
+            <style>
+                .iAknsY {
+                    border-radius: 0 !important;
+                }
+
+                .fvzbRo {
+                    padding-top: 0 !important;
+                }
+
+                .fthiGM {
+                    right: 14px;
+                }
+
+                .IPkUY {
+                    display: none !important;
+                }
+            </style>
+            `;
+    </script>
+
     <!-- Channel Plugin Scripts -->
     <script>
         (function () {
@@ -49,6 +72,12 @@
             "pluginKey": "13f6904b-4682-444d-a9db-3df8aee19af5"
         }, function onBoot(err, user) {
             ChannelIO("show");
+
+
+
+
+            let head = $("#ch-plugin-script-iframe").contents().find("head");
+            $(head).append(css);
         });
     </script>
     <!-- End Channel Plugin -->
